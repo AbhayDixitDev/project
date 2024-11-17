@@ -7,6 +7,7 @@ const userRoutes = require("./routes/user");
 const authRoutes = require("./routes/auth");
 const songRoutes = require("./routes/songs");
 const playlistRoutes = require("./routes/playlists");
+const searchRoutes = require("./routes/search");
 const app = express();
 
 connection()
@@ -17,6 +18,7 @@ app.use("/api/users",userRoutes)
 app.use("/api/login",authRoutes)
 app.use("/api/songs",songRoutes)
 app.use("/api/playlists",playlistRoutes)
+app.use("/api/",searchRoutes)
 
 
 const port = process.env.PORT || 8080;
